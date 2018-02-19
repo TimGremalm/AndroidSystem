@@ -11,6 +11,7 @@
 	<div id="header">
 		<img src="{{ asset('images/securitylogotype.png') }}" />
 		<h1>Central Intelligence</h1>
+		&nbsp;
 	</div>
 	<div id="content">
 		{% if idfound == true %}
@@ -19,7 +20,7 @@
 					<img src="{{ profile.profilephoto }}" />
 				</div>
 				<div id="pofilenames">
-					<h1>Profile {{ id }} {{ profile.name }}</h1>
+					<h1><img id="spinner" src="{{ asset('images/atom.gif') }}" />Profile {{ profile.name }}</h1>
 					<ul>
 						<li><b>Name:</b> {{ profile.name }}</li>
 						<li><b>Nicks:</b> {{ profile.nick }}</li>
@@ -38,21 +39,31 @@
 				</div>
 			</div>
 			<div id="summary">
+				<h2>Summary</h2>
 				<p>{{ profile.summary }}</p>
 			</div>
-			<div id="crimehistory">
-				<ul>
-					<!--<img src="{{ asset('images/atom.gif') }}" />-->
-					<!--<img src="{{ asset('images/body.gif') }}" />-->
-					<!--<img src="{{ asset('images/spinny.gif') }}" />-->
-				</ul>
+			<div id="crime">
+				<div id="crimehistory">
+					<h2>Criminal History</h2>
+					<ul>
+						<li>asdasd</li>
+						<li>asdasd</li>
+						<li>asdasd</li>
+						<li>asdasd</li>
+						<li>asdasd</li>
+						<li>asdasd</li>
+						<li>asdasd</li>
+					</ul>
+				</div>
+				<div id="fieldmeasure">
+					<img src="{{ asset('images/body.gif') }}" />
+				</div>
 			</div>
+			<div style="clear: both"></div>
 		{% else %}
 			<div id="basicfacts">
 				<h1>Id {{ id }} not found</h1>
 			</div>
 		{% endif %}
-
-		{{ dump() }}
 	</div>
 {% endblock %}

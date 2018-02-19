@@ -1,4 +1,75 @@
 body {
-	background: #000000;
+	background: #111111;
 	color: #999999;
+	margin: 0px;
+	font-family: Verdana;
+}
+
+#header {
+	display: block;
+	background: #000000;
+	margin: 0px;
+	margin-bottom: 40px;
+	height: 150px;
+	color: #999999;
+	border-bottom: 1em #00FF00 solid;
+}
+
+#header img {
+	display: inline;
+	height: 80%;
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+#header h1 {
+	font-size: 5em;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 10px;
+	display: inline;
+}
+
+#spinner {
+	height: 2em;
+	display: inline;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#content {
+	clear: both;
+	margin: 0 auto;
+	border: #00FF00 3px solid;
+	width: 80%;
+	box-shadow: 10px 10px;
+	margin-bottom: 40px;
+	min-width: 850px;
+}
+
+#pofilephotoes {
+	float: left;
+	width: 20%;
+	margin: 1em;
+	border: 5px solid #B0413E;
+}
+#pofilephotoes img {
+	width: 100%;
+}
+
+#pofilenames {
+	float: left;
+}
+
+#summary {
+	padding: 1em;
+	clear: both;
+}
+
+#crimehistory {
+	float: left;
+}
+
+#fieldmeasure {
+	float: right;
 }

@@ -56,6 +56,15 @@ class Profiles
 	 */
 	private $mass;
 
+	/**
+	 * @ORM\Column(type="string", length=100, nullable=true)
+	 */
+	private $occupation;
+
+	/**
+	 * @ORM\Column(type="string", length=200, nullable=true)
+	 */
+	private $android;
 
 
 
@@ -107,7 +116,7 @@ class Profiles
 	public function setSummary($summary) {
 		$this->summary = $summary;
 	}
-	
+
 	/**
 	 * @return mixed
 	 */
@@ -176,5 +185,33 @@ class Profiles
 	 */
 	public function setMass($mass) {
 		$this->mass = $mass;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getOccupation() {
+		return $this->occupation;
+	}
+
+	/**
+	 * @param mixed $occupation
+	 */
+	public function setOccupation($occupation) {
+		$this->occupation = $occupation;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getAndroid() {
+		return $this->android;
+	}
+
+	/**
+	 * @param mixed $android
+	 */
+	public function setAndroid($android) {
+		$this->android = $android;
 	}
 }

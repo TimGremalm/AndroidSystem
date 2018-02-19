@@ -3,7 +3,41 @@
 {% block title %}Profile {{ id }}{% endblock %}
 
 {% block body %}
-<h1>Profile {{ id }}</h1>
-{{ dump() }}
+	<div id="content">
+		{% if idfound == true %}
+			<div id="basicfacts">
+				<div id="pofilephotoes">
+					<img src="{{ profile.profilephoto }}" />
+				</div>
+				<div id="pofilenames">
+					<h1>Profile {{ id }} {{ profile.name }}</h1>
+					<ul>
+						<li><b>Name:</b> {{ profile.name }}</li>
+						<li><b>Nicks:</b> {{ profile.nick }}</li>
+						<li><b>Id:</b> {{ profile.id }}</li>
+						<li><b>Tag:</b> {{ profile.tag }}</li>
+						<li><b>Sex:</b> {{ profile.sex }}</li>
+						<li><b>Height:</b> {{ profile.height }}</li>
+						<li><b>Weight:</b> {{ profile.mass }}</li>
+						<li><b>Occupation:</b> {{ profile.occupation }}</li>
+						<li><b>Android:</b> {{ profile.android }}</li>
+					</ul>
+				</div>
+			</div>
+			<div id="summary">
+				<p>{{ profile.summary }}</p>
+			</div>
+			<div id="crimehistory">
+				<ul>
 
+				</ul>
+			</div>
+		{% else %}
+			<div id="basicfacts">
+				<h1>Id {{ id }} not found</h1>
+			</div>
+		{% endif %}
+
+		{{ dump() }}
+	</div>
 {% endblock %}

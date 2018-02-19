@@ -66,6 +66,26 @@ class Profiles
 	 */
 	private $android;
 
+	/**
+	 * @ORM\Column(type="date", nullable=true)
+	 */
+	private $birthdate;
+
+	/**
+	 * @ORM\Column(type="decimal", scale=1, nullable=true)
+	 */
+	private $age;
+
+	/**
+	 * @ORM\Column(type="string", length=200, nullable=true)
+	 */
+	private $hair;
+
+	/**
+	 * @ORM\Column(type="string", length=200, nullable=true)
+	 */
+	private $eyes;
+
 
 
 	/**
@@ -213,5 +233,61 @@ class Profiles
 	 */
 	public function setAndroid($android) {
 		$this->android = $android;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getBirthdate() {
+		return $this->birthdate;
+	}
+
+	/**
+	 * @param mixed $birthdate
+	 */
+	public function setBirthdate($birthdate) {
+		$this->birthdate = $birthdate;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getAge() {
+		return $this->age;
+	}
+
+	/**
+	 * @param mixed $age
+	 */
+	public function setAge($age) {
+		$this->age = $age;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getHair() {
+		return $this->hair;
+	}
+
+	/**
+	 * @param mixed $hair
+	 */
+	public function setHair($hair) {
+		$this->hair = $hair;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getEyes() {
+		return $this->eyes;
+	}
+
+	/**
+	 * @param mixed $eyes
+	 */
+	public function setEyes($eyes) {
+		$this->eyes = $eyes;
 	}
 }

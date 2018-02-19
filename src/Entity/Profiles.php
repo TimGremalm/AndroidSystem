@@ -24,6 +24,16 @@ class Profiles
 	/**
 	 * @ORM\Column(type="string", length=100)
 	 */
+	private $nick;
+
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $summary;
+
+	/**
+	 * @ORM\Column(type="string", length=100)
+	 */
 	private $tag;
 
 	/**
@@ -32,7 +42,7 @@ class Profiles
 	private $profilephoto;
 
 	/**
-	 * @ORM\Column(type="string", length=100)
+	 * @ORM\Column(type="string", length=100, nullable=true)
 	 */
 	private $sex;
 
@@ -45,6 +55,7 @@ class Profiles
 	 * @ORM\Column(type="decimal", scale=3, nullable=true)
 	 */
 	private $mass;
+
 
 
 
@@ -69,6 +80,34 @@ class Profiles
 		$this->name = $name;
 	}
 
+	/**
+	 * @return mixed
+	 */
+	public function getNick() {
+		return $this->nick;
+	}
+
+	/**
+	 * @param mixed $nick
+	 */
+	public function setNick($nick) {
+		$this->nick = $nick;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getSummary() {
+		return $this->summary;
+	}
+
+	/**
+	 * @param mixed $summary
+	 */
+	public function setSummary($summary) {
+		$this->summary = $summary;
+	}
+	
 	/**
 	 * @return mixed
 	 */

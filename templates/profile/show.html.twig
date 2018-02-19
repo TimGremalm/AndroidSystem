@@ -2,7 +2,16 @@
 
 {% block title %}Profile {{ id }}{% endblock %}
 
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
+{% endblock %}
+
 {% block body %}
+	<div id="header">
+		<img src="{{ asset('images/securitylogotype.png') }}" />
+		<h1>Central Intelligence</h1>
+	</div>
 	<div id="content">
 		{% if idfound == true %}
 			<div id="basicfacts">
@@ -33,7 +42,9 @@
 			</div>
 			<div id="crimehistory">
 				<ul>
-
+					<!--<img src="{{ asset('images/atom.gif') }}" />-->
+					<!--<img src="{{ asset('images/body.gif') }}" />-->
+					<!--<img src="{{ asset('images/spinny.gif') }}" />-->
 				</ul>
 			</div>
 		{% else %}

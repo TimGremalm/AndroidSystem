@@ -19,11 +19,19 @@ class ProfileController extends AbstractController {
 		if (!$profile) {
 			//throw $this->createNotFoundException('No product found for id '.$id);
 			$id_found = false;
+			$android_warning = "idnotfound";
 		} else {
 			$id_found = true;
+			$android_warning = "maybeandroid";
+			if (preg_match('/disproven/i', $profile->getAndroid()) == true) {
+				$android_warning = "disprovenandroid";
+			}
+			if (preg_match('/confirmed/i', $profile->getAndroid()) == true) {
+				$android_warning = "confirmedandroid";
+			}
 		}
 
-		return $this->render('profile/show.html.twig', ['id' => $id, 'idfound' => $id_found, 'profile' => $profile]);
+		return $this->render('profile/show.html.twig', ['id' => $id, 'idfound' => $id_found, 'profile' => $profile, 'android_warning' => $android_warning]);
 	}
 
 }

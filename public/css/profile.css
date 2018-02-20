@@ -12,7 +12,7 @@ body {
 	margin-bottom: 40px;
 	height: 150px;
 	color: #999999;
-	border-bottom: 1em #00FF00 solid;
+	border-bottom: 1em #550000 solid;
 }
 
 #header img {
@@ -40,11 +40,23 @@ body {
 #content {
 	clear: both;
 	margin: 0 auto;
-	border: #00FF00 3px solid;
 	width: 80%;
 	box-shadow: 10px 10px;
 	margin-bottom: 40px;
 	min-width: 850px;
+}
+
+.confirmedandroid {
+	border: #FF0000 7px solid;
+}
+.disprovenandroid {
+	border: #00FF00 7px solid;
+}
+.maybeandroid {
+	border: #FFFF00 7px solid;
+}
+.idnotfound {
+	border: #333333 7px solid;
 }
 
 #pofilephotoes {
@@ -59,14 +71,16 @@ body {
 
 #pofilenames {
 	float: left;
+	width: 35%;
 }
 
 #summary {
-	padding: 1em;
-	clear: both;
+	float: left;
+	width: 40%;
 }
 
 #crimehistory {
+	clear: both;
 	float: left;
 }
 

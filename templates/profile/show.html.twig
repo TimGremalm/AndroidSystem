@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Profile {{ id }}{% endblock %}
+{% block title %}Profile {{ id }} {% if idfound == true %}{{ profile.name }}{% endif %}{% endblock %}
+
+
 
 {% block stylesheets %}
 	{{ parent() }}
@@ -13,7 +15,7 @@
 		<h1>Central Intelligence</h1>
 		&nbsp;
 	</div>
-	<div id="content">
+	<div id="content" class="{{ android_warning }}">
 		{% if idfound == true %}
 			<div id="basicfacts">
 				<div id="pofilephotoes">
@@ -37,10 +39,10 @@
 						<li><b>Android:</b> {{ profile.android }}</li>
 					</ul>
 				</div>
-			</div>
-			<div id="summary">
-				<h2>Summary</h2>
-				<p>{{ profile.summary }}</p>
+				<div id="summary">
+					<h2>Summary</h2>
+					<p>{{ profile.summary }}</p>
+				</div>
 			</div>
 			<div id="crime">
 				<div id="crimehistory">
